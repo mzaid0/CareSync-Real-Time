@@ -1,0 +1,54 @@
+# ================= Root =================
+.vscode/
+*.bat
+*.tsbuildinfo
+*.pem
+
+# ================ Node Modules ================
+node_modules/
+**/node_modules/
+
+# ================ Logs ================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ================ Environment ================
+.env
+.env.*
+**/.env
+**/.env.*
+
+# ================= Frontend (Vite + TS) =================
+frontend/dist/
+frontend/.DS_Store
+frontend/coverage/
+frontend/.pnp
+frontend/.pnp.js
+frontend/.vercel
+
+# ================= Backend =================
+backend/dist/
+backend/.vscode/
+backend/private_key.pem
+backend/public_key.pem
+backend/bun.lockb
+
+# ================= Optional: Static/media (if used) =================
+backend/public/**/*.png
+backend/public/**/*.jpg
+backend/public/**/*.jpeg
+backend/public/**/*.svg
+backend/public/**/*.webp
+backend/public/**/*.zip
+backend/public/**/*.txt
+backend/public/**/*.xlsx
+backend/public/**/*.xls
+
+# ================= Optional: Prisma or Generated Clients (if not used, remove) =================
+backend/prisma/**/client/
+backend/prisma/**/migrations/
+
+# ================= Shared Folder (if applicable) =================
+shared/node_modules/
+shared/dist/

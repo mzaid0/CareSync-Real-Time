@@ -128,7 +128,6 @@ const Dashboard = () => {
                             size="icon"
                             onClick={() => { }}
                             className="md:hidden text-gray-600 hover:bg-green-50"
-                            aria-label="Open sidebar"
                         >
                             <FaChevronRight size={24} />
                         </Button>
@@ -138,7 +137,6 @@ const Dashboard = () => {
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 className="pl-10 pr-4 py-2 bg-gray-50 rounded-lg border-gray-200 focus:ring-green-400"
-                                aria-label="Search"
                             />
                             <FaSearch className="absolute left-3 top-3 text-gray-400" />
                         </div>
@@ -150,7 +148,6 @@ const Dashboard = () => {
                                 size="icon"
                                 onClick={() => setNotificationsOpen(!notificationsOpen)}
                                 className="text-gray-600 hover:bg-green-50"
-                                aria-label="Open Notifications"
                             >
                                 <FaBell size={20} />
                             </Button>
@@ -166,9 +163,9 @@ const Dashboard = () => {
                         </div>
                         <Button
                             variant={emergencyStatus ? "destructive" : "outline"}
-                            className="gap-2 border-red-400 text-red-500 hover:bg-red-50"
+                            className={`gap-2 border-red-400 hover:bg-red-50 hover:text-red-500/90 ${emergencyStatus ? "text-white" : "text-red-500"
+                                }`}
                             onClick={() => setEmergencyStatus(!emergencyStatus)}
-                            aria-label="Emergency Button"
                         >
                             <FaExclamationTriangle />
                             Emergency Button
@@ -178,7 +175,6 @@ const Dashboard = () => {
                             size="icon"
                             onClick={() => setChatOpen(!chatOpen)}
                             className="text-gray-600 hover:bg-green-50"
-                            aria-label="Open Chat"
                         >
                             <FaCommentDots size={20} />
                         </Button>
@@ -196,7 +192,6 @@ const Dashboard = () => {
                             size="sm"
                             className="border-red-400 text-red-500 hover:bg-red-50"
                             onClick={handleResolveAlert}
-                            aria-label="Resolve alert"
                         >
                             Resolve Alert
                         </Button>
@@ -205,7 +200,7 @@ const Dashboard = () => {
 
                 <Card className="bg-white rounded-xl shadow-sm border border-gray-200">
                     <CardHeader>
-                        <CardTitle className="text-lg font-semibold flex items-center gap-2 text-green-500">
+                        <CardTitle className="text-lg font-semibold flex items-center gap-2 text-green-400">
                             <FaPlus /> Quick Actions
                         </CardTitle>
                     </CardHeader>
@@ -213,30 +208,24 @@ const Dashboard = () => {
                         <div className="flex flex-wrap gap-4">
                             <Button
                                 onClick={() => setTaskModalOpen(true)}
-                                className="bg-green-500 hover:bg-green-600 text-white"
-                                aria-label="Add Task"
                             >
                                 <FaTasks className="mr-2" /> Add Task
                             </Button>
                             <Button
                                 variant="outline"
-                                className="border-green-400 text-green-500 hover:bg-green-50"
-                                aria-label="Add Appointment"
                             >
                                 <FaCalendarAlt className="mr-2" /> Add Appointment
                             </Button>
                             <Button
                                 variant="outline"
-                                className="border-green-400 text-green-500 hover:bg-green-50"
-                                aria-label="Add Medication"
+
                             >
                                 <FaPills className="mr-2" /> Add Medication
                             </Button>
                             <Button
                                 variant="outline"
-                                className="border-red-400 text-red-500 hover:bg-red-50"
+                                className="border-red-400 text-red-500 hover:bg-red-50 hover:text-red-500/90"
                                 onClick={() => setAlertModalOpen(true)}
-                                aria-label="Create Alert"
                             >
                                 <FaExclamationTriangle className="mr-2" /> Create Alert
                             </Button>
@@ -253,7 +242,7 @@ const Dashboard = () => {
                             className="bg-white p-6 rounded-xl shadow-sm border border-gray-200"
                         >
                             <div className="flex items-center gap-4">
-                                <div className="p-3 rounded-lg bg-green-100 text-green-500">
+                                <div className="p-3 rounded-lg bg-green-100 text-green-400">
                                     {key === "care_plans" && <FaTasks size={20} />}
                                     {key === "appointments" && <FaCalendarAlt size={20} />}
                                     {key === "medications" && <FaPills size={20} />}
@@ -269,7 +258,7 @@ const Dashboard = () => {
                                                     ? "Medications"
                                                     : "Alerts"}
                                     </h3>
-                                    <p className="text-2xl font-bold text-green-500">{value}</p>
+                                    <p className="text-2xl font-bold text-green-400">{value}</p>
                                 </div>
                             </div>
                         </div>
@@ -278,7 +267,7 @@ const Dashboard = () => {
 
                 <Card className="bg-white rounded-xl shadow-sm border border-gray-200">
                     <CardHeader>
-                        <CardTitle className="text-lg font-semibold flex items-center gap-2 text-green-600">
+                        <CardTitle className="text-lg font-semibold flex items-center gap-2 text-green-400">
                             <FaCalendarAlt /> Schedule Calendar
                         </CardTitle>
                     </CardHeader>

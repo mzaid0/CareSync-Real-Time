@@ -42,7 +42,7 @@ export const NotificationsPanel = ({
           .filter((note) => notificationFilter === "all" || note.type === notificationFilter)
           .map((note, idx) => (
             <div key={idx} className="text-sm text-gray-600 p-2 hover:bg-green-50 rounded flex items-start gap-2">
-              {note.type === "task" && <FaTasks className="text-green-500" />}
+              {note.type === "task" && <FaTasks className="text-green-400" />}
               {note.type === "alert" && <FaExclamationTriangle className="text-red-500" />}
               {note.type === "appointment" && <FaCalendarAlt className="text-blue-500" />}
               {note.message}

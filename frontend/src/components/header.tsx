@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
-import { NAV_LINKS } from "@/constants/hreader";
+import { NAV_LINKS } from "@/constants/header";
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);

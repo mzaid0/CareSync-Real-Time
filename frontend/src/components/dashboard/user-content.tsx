@@ -6,10 +6,10 @@ import { FaCalendarAlt, FaPills, FaTasks } from "react-icons/fa";
 import { BsGraphUp } from "react-icons/bs";
 
 export const UserContent = () => (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         <Card className="bg-white rounded-xl shadow-sm border border-gray-200">
             <CardHeader>
-                <CardTitle className="text-lg font-semibold flex items-center gap-2 text-green-500">
+                <CardTitle className="text-lg font-semibold flex items-center gap-2 text-green-400">
                     <FaTasks /> My Care Plans
                 </CardTitle>
             </CardHeader>
@@ -32,7 +32,7 @@ export const UserContent = () => (
         </Card>
         <Card className="bg-white rounded-xl shadow-sm border border-gray-200">
             <CardHeader>
-                <CardTitle className="text-lg font-semibold flex items-center gap-2 text-green-500">
+                <CardTitle className="text-lg font-semibold flex items-center gap-2 text-green-400">
                     <FaPills /> My Medications
                 </CardTitle>
             </CardHeader>
@@ -52,7 +52,7 @@ export const UserContent = () => (
         </Card>
         <Card className="bg-white rounded-xl shadow-sm border border-gray-200">
             <CardHeader>
-                <CardTitle className="text-lg font-semibold flex items-center gap-2 text-green-500">
+                <CardTitle className="text-lg font-semibold flex items-center gap-2 text-green-400">
                     <FaCalendarAlt /> My Appointments
                 </CardTitle>
             </CardHeader>
@@ -67,7 +67,7 @@ export const UserContent = () => (
         </Card>
         <Card className="bg-white rounded-xl shadow-sm border border-gray-200">
             <CardHeader>
-                <CardTitle className="text-lg font-semibold flex items-center gap-2 text-green-500">
+                <CardTitle className="text-lg font-semibold flex items-center gap-2 text-green-400">
                     <BsGraphUp /> My Health Status
                 </CardTitle>
             </CardHeader>

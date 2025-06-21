@@ -113,7 +113,7 @@ const CustomCalendar = ({
               className={`
                 p-2 rounded-full text-sm
                 ${isCurrentMonth ? "text-gray-900" : "text-gray-400"}
-                ${isSelected ? "bg-green-500 text-white" : "hover:bg-gray-100"}
+                ${isSelected ? "bg-green-400 text-white" : "hover:bg-gray-100"}
                 ${dayHasEvents ? "relative" : ""}
               `}
               aria-label={`Select ${format(day, "MMMM d, yyyy")}`}

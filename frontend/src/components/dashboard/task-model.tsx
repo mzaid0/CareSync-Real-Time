@@ -60,8 +60,6 @@ export const TaskModal = ({ taskModalOpen, setTaskModalOpen, newTask, setNewTask
                     </Button>
                     <Button
                         onClick={handleAddTask}
-                        className="bg-green-500 hover:bg-green-600 text-white"
-                        aria-label="Save task"
                     >
                         Save Task
                     </Button>

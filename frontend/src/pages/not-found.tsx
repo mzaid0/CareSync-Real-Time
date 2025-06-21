@@ -31,7 +31,7 @@ const NotFoundPage = () => {
                     </motion.div>
 
                     {/* Text */}
-                    <h1 className="text-5xl font-bold text-gray-900">404</h1>
+                    <h1 className="text-5xl font-bold text-green-400">404</h1>
                     <h2 className="text-2xl font-semibold text-gray-700">
                         Oops! Page Not Found
                     </h2>

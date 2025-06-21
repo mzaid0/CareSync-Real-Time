@@ -15,7 +15,7 @@ const HomePage = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5 }}
                         >
-                            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                            <h1 className="text-4xl md:text-4xl font-bold text-gray-900 leading-tight">
                                 Collaborative Caregiving
                                 <br />
                                 <span className="text-green-400">Made Simple</span>

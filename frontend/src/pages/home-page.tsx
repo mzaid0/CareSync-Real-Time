@@ -1,6 +1,6 @@
 import { Button } from "../components/ui/button";
 import { motion } from "framer-motion";
-import { FEATURES } from "../constants/features";
+import { FEATURES } from "@/constants/feature-data"; 
 import { Link } from "react-router-dom";
 
 const HomePage = () => {

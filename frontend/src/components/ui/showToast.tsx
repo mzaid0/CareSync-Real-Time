@@ -4,25 +4,30 @@ type ToastType = 'success' | 'error' | 'info' | 'warning';
 
 interface ToastOptions {
   description?: string;
+  duration?: number;
 }
 
-export const showToast = (type: ToastType, title: string, options: ToastOptions = {}) => {
-  const { description, ...restOptions } = options;
-  
+export const showToast = (
+  type: ToastType,
+  title: string = "Something happened",
+  options: ToastOptions = {}
+) => {
+  const { description, ...rest } = options;
+
   switch (type) {
     case 'success':
-      toast.success(title, { description, ...restOptions });
+      toast.success(title, { description, ...rest });
       break;
     case 'error':
-      toast.error(title, { description, ...restOptions });
+      toast.error(title, { description, ...rest });
       break;
     case 'info':
-      toast.info(title, { description, ...restOptions });
+      toast.info(title, { description, ...rest });
       break;
     case 'warning':
-      toast.warning(title, { description, ...restOptions });
+      toast.warning(title, { description, ...rest });
       break;
     default:
-      toast(title, { description, ...restOptions });
+      toast(title, { description, ...rest });
   }
 };

@@ -14,6 +14,8 @@ import Dashboard from "./pages/dashboard-page";
 import NotFoundPage from "./pages/not-found";
 import AboutPage from "./pages/about-page";
 import FeaturesPage from "./pages/features-page";
+import LoginPage from "./pages/login-page";
+import RegisterPage from "./pages/register-page";
 
 const AppContent = () => {
   const location = useLocation();
@@ -27,6 +29,8 @@ const AppContent = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/features" element={<FeaturesPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
 
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<Dashboard />} />

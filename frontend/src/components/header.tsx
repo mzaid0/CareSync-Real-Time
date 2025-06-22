@@ -19,7 +19,12 @@ const Header = () => {
         >
             <div className="max-w-7xl mx-auto px-6 lg:px-20">
                 <div className="flex items-center justify-between h-16">
-                    <Link to="/" className="flex items-center">
+                    <Link to="/" className="flex items-center gap-2">
+                        <img
+                            src="/logo.png"
+                            alt="CareSync Logo"
+                            className="h-10 w-10 object-contain"
+                        />
                         <motion.h1
                             whileHover={{ scale: 1.05 }}
                             className="text-xl sm:text-2xl font-bold text-gray-900"

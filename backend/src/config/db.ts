@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-
 const connectDB = async (): Promise<void> => {
   try {
     const MONGO_URI = process.env.MONGO_URI;
@@ -15,5 +14,4 @@ const connectDB = async (): Promise<void> => {
     process.exit(1);
   }
 };
-
 export default connectDB;

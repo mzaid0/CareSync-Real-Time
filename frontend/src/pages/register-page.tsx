@@ -29,6 +29,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "../components/ui/select";
+import { useAuthStore } from "@/store/user-store";
 
 // Zod schema for validation
 const registerSchema = z.object({
@@ -59,6 +60,8 @@ const RegisterPage = () => {
         mutationFn: authService.register,
 
         onSuccess: (data) => {
+            const { data: user, token } = data
+            useAuthStore.getState().login(user, token)
             showToast("success", "Registration successful", {
                 description: data.message || "You are now Registered in.",
             });

@@ -7,9 +7,8 @@ import {
   FaFileAlt,
   FaPills,
   FaSearch,
-  FaSignOutAlt,
   FaTasks,
-  FaUsers,
+  FaUsers
 } from "react-icons/fa";
 
 export const NAV_ITEMS: NavItem[] = [
@@ -31,5 +30,4 @@ export const NAV_ITEMS: NavItem[] = [
   { key: "Settings", icon: FaCog, route: "/dashboard/settings" },
   { key: "Family Sharing", icon: FaUsers, route: "/dashboard/family-sharing" },
   { key: "Search", icon: FaSearch, route: "/dashboard/search" },
-  { key: "Logout", icon: FaSignOutAlt, isAction: true },
 ];

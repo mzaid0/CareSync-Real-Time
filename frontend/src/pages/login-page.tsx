@@ -22,6 +22,7 @@ import {
     FormMessage,
 } from "../components/ui/form";
 import { Input } from "../components/ui/input";
+import { useAuthStore } from "@/store/user-store";
 
 const loginSchema = z.object({
     email: z.string().email("Please enter a valid email address"),
@@ -45,6 +46,9 @@ const LoginPage = () => {
         mutationFn: authService.login,
 
         onSuccess: (data) => {
+            const { token, data: user } = data;
+            useAuthStore.getState().login(user, token);
+
             showToast("success", "Login successful", {
                 description: data.message || "You are now logged in.",
             });

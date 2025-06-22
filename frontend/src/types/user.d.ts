@@ -20,8 +20,19 @@ export interface LoginPayload {
   email: string;
   password: string;
 }
+export interface LoginResponse extends ApiResponse<User> {
+  token: string;
+}
 
 export interface ApiResponse<T> {
   message: string;
   data: T;
+  token:string
+}
+
+interface AuthState {
+  user: User | null;
+  token: string | null;
+  login: (user: User, token: string) => void;
+  logout: () => void;
 }

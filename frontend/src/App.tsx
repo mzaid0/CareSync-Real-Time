@@ -15,7 +15,8 @@ import NotFoundPage from "./pages/not-found";
 import AboutPage from "./pages/about-page";
 import FeaturesPage from "./pages/features-page";
 import LoginPage from "./pages/login/login-page";
-import RegisterPage from "./pages/register/register-page"; 
+import RegisterPage from "./pages/register/register-page";
+import CarePlanManagement from "./pages/careplans/careplan-page";
 
 const AppContent = () => {
   const location = useLocation();
@@ -34,6 +35,8 @@ const AppContent = () => {
 
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<Dashboard />} />
+          <Route path="care-plans" element={<CarePlanManagement />} />
+
         </Route>
 
         <Route path="*" element={<NotFoundPage />} />

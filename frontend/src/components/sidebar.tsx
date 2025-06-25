@@ -64,7 +64,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <div>
                         <h2 className="font-semibold text-gray-800">{userName}</h2>
                         <Badge className="bg-green-100 text-green-600 capitalize">
-                            {userRole}
+                            {userRole.split("_").join(" ")}
                         </Badge>
                     </div>
                     <Button

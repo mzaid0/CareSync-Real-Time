@@ -1,4 +1,4 @@
-import authService from "@/api/services/auth-service";
+import {authService} from "@/api/services/auth-service";
 import { showToast } from "@/components/ui/showToast";
 import { useAuthStore } from "@/store/user-store";
 import { registerSchema, type RegisterFormValues } from "@/validator/user-validator";

@@ -123,7 +123,7 @@ export const getUsers = async (
     );
     res.status(200).json({
       message: "Users fetched successfully",
-      data: { users },
+      data: users,
     });
   } catch (error) {
     throw new AppError("Failed to fetch users", 500);

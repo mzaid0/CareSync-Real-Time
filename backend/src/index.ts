@@ -5,6 +5,7 @@ import connectDB from "./config/db.js";
 import cookieParser from "cookie-parser";
 import helmet from "helmet";
 import userRoutes from "./routes/user-routes.js";
+import carePlanRoutes from "./routes/careplan-routes.js";
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use("/api/users", userRoutes);
+app.use("/api/care-plans", carePlanRoutes);
 
 const startServer = async () => {
   try {

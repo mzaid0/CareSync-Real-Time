@@ -14,6 +14,7 @@ import authService from "@/api/services/auth-service";
 
 const LoginForm = () => {
     const navigate = useNavigate();
+    const { login } = useAuthStore()
 
     const form = useForm<LoginFormValues>({
         resolver: zodResolver(loginSchema),
@@ -24,7 +25,7 @@ const LoginForm = () => {
         mutationFn: authService.login,
         onSuccess: (data) => {
             const { token, data: user } = data;
-            useAuthStore.getState().login(user, token);
+            login(user, token);
             showToast("success", "Login successful", { description: data.message || "You are now logged in." });
             navigate("/dashboard");
         },

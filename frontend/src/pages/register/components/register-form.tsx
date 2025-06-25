@@ -15,6 +15,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 const RegisterForm = () => {
     const navigate = useNavigate();
+    const { login } = useAuthStore();
 
     const form = useForm<RegisterFormValues>({
         resolver: zodResolver(registerSchema),
@@ -31,7 +32,7 @@ const RegisterForm = () => {
         mutationFn: authService.register,
         onSuccess: (data) => {
             const { data: user, token } = data;
-            useAuthStore.getState().login(user, token);
+            login(user, token);
             showToast("success", "Registration successful", {
                 description: data.message || "You are now Registered.",
             });

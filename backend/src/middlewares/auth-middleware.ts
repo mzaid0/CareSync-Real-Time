@@ -30,10 +30,6 @@ export const authenticateToken = async (
       userId: new Types.ObjectId(decoded.userId),
       role: decoded.role as UserPayload["role"],
     };
-
-    console.info(
-      `User authenticated: ID=${decoded.userId}, Role=${decoded.role}`
-    );
     next();
   } catch (error) {
     if (error instanceof jwt.TokenExpiredError) {

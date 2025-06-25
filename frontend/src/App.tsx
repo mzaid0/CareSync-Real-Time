@@ -10,12 +10,12 @@ import Footer from "./components/footer";
 import DashboardLayout from "./layouts/dashboard-layout";
 
 import HomePage from "./pages/home-page";
-import Dashboard from "./pages/dashboard-page";
+import Dashboard from "./pages/dashboard/dashboard-page";
 import NotFoundPage from "./pages/not-found";
 import AboutPage from "./pages/about-page";
 import FeaturesPage from "./pages/features-page";
-import LoginPage from "./pages/login-page";
-import RegisterPage from "./pages/register-page";
+import LoginPage from "./pages/login/login-page";
+import RegisterPage from "./pages/register/register-page"; 
 
 const AppContent = () => {
   const location = useLocation();

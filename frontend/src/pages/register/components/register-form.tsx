@@ -1,4 +1,4 @@
-import {authService} from "@/api/services/auth-service";
+import { authService } from "@/api/services/auth-service";
 import { showToast } from "@/components/ui/showToast";
 import { useAuthStore } from "@/store/user-store";
 import { registerSchema, type RegisterFormValues } from "@/validator/user-validator";
@@ -40,7 +40,7 @@ const RegisterForm = () => {
         },
         onError: (error: Error) => {
             showToast("error", "Registration failed", {
-                description: error.message,
+                description: error.message || "Failed to register user",
             });
         },
     });
@@ -128,8 +128,8 @@ const RegisterForm = () => {
                 <Button type="submit" disabled={isPending}>
                     {isPending ? (
                         <>
-                            <Loader2 className="h-5 w-5 animate-spin mr-2" />
                             Creating Account...
+                            <Loader2 className="h-5 w-5 animate-spin" />
                         </>
                     ) : (
                         "Create Account"

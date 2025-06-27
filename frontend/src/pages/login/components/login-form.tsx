@@ -10,7 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {authService} from "@/api/services/auth-service";
+import { authService } from "@/api/services/auth-service";
 
 const LoginForm = () => {
     const navigate = useNavigate();
@@ -71,7 +71,7 @@ const LoginForm = () => {
                     />
                 </div>
                 <Button type="submit" disabled={isPending}>
-                    {isPending ? <><Loader2 className="h-5 w-5 animate-spin mr-2" />Signing in...</> : "Sign In"}
+                    {isPending ? <>Signing in... <Loader2 className="h-5 w-5 animate-spin" /></> : "Sign In"}
                 </Button>
             </form>
         </Form>
